@@ -13,19 +13,19 @@ const postSchema = new mongoose.Schema(
     likes: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Like",
+        ref: "likes",
       },
     ],
     comments: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "comment",
+        ref: "comments",
       },
     ],
   },
   { timestamps: true }
 );
 
-const postModel = mongoose.model("post", postSchema);
+const postModel = mongoose.model("posts", postSchema);
 
 export default postModel;

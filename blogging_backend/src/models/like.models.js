@@ -4,7 +4,7 @@ const likeSchema = new mongoose.Schema(
   {
     post: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "post",
+      ref: "posts",
     },
     user: {
       type: String,
@@ -14,6 +14,6 @@ const likeSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const likeModel = mongoose.model("Like", likeSchema);
+const likeModel = mongoose.model("likes", likeSchema);
 
 export default likeModel;

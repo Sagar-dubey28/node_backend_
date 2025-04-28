@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const commentSchema = new mongoose.Schema({
   post: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "post",
+    ref: "posts",
   },
   user: {
     type: String,
@@ -15,6 +15,6 @@ const commentSchema = new mongoose.Schema({
   },
 },{timestamps:true});
 
-const commentModel = mongoose.model("comment", commentSchema);
+const commentModel =  mongoose.model("comments", commentSchema);
 
 export default commentModel;
